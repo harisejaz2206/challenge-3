@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -8,39 +9,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <Login />
-          }
-        />
-        <Route
-          path="/aboutme"
-          element={
-            <Layout>
-              <AboutMe />
-            </Layout>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <Layout>
-              <Blog />
-            </Layout>
-          }
-        />
-        <Route
-          path="/blog/blog-listing/:blogId"
-          element={
-            <Layout>
-              <BlogPost />
-            </Layout>
+            <Home />
           }
         />
       </Routes>
