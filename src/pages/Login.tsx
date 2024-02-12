@@ -69,7 +69,9 @@ const Login = () => {
                         <div className="mb-6">
                             <button
                                 type="submit"
-                                className="bg-blue-600 text-white rounded-lg py-2 hover:blue-600 focus:ring focus:ring-blue-600 focus:ring-opacity-50 w-full transition-colors duration-300"
+                                disabled={!formik.isValid}
+                                className={`bg-blue-600 text-white rounded-lg py-2 hover:blue-600 focus:ring focus:ring-blue-600 focus:ring-opacity-50 w-full transition-colors duration-300 ${!formik.isValid && 'bg-gray-400 cursor-not-allowed'}`}
+
                             >
                                 Log In
                             </button>
